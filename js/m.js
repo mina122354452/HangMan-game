@@ -18,7 +18,7 @@ if (localStorage.getItem("gameNumber")) {
 let rank = 'nope';
 let br = document.createElement("br");
 let closeGame = document.querySelector(".i-con-c");
-let mainUrl = "file:///D:/programming/web/js/js%20big%20tuts/HangMan%20game/index.html";
+let mainUrl = "https://mina122354452.github.io/HangMan-game/index.html";
 closeGame.onclick = function() {
     window.location.href = mainUrl;
 
@@ -1062,7 +1062,7 @@ lettersArray.forEach(letter => {
 //     famousPeople: ["Albert Einstein", "Hitchcock", "Alexander", "Cleopatra", "Mahatma Ghandi"],
 //     countries: ["Syria", "Palestine", "Yemen", "Egypt", "Bahrain", "Qatar"]
 // };
-fetch('https://mina122354452.github.io/test/js.json')
+fetch('https://mina122354452.github.io/HangMan-game/js.json')
     .then(response => response.json())
     .then(data => {
 
