@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hangman Game</title>
+    <link rel="stylesheet" href="css/all.min.css">
+    <link rel="stylesheet" href="css/cstjs.css">
+</head>
+
+<body>
+
+
+
+
+    <div class="container">
+        <div class="dash-con">
+            <div class="info">
+                <div>
+                    <p>Hello</p>
+                    <span class="the-name"></span>
+                </div>
+            </div>
+            <Div class="card">
+
+                <div class="info-game">
+                    <span id="d-span"></span>
+
+                    <p id="dash"></p>
+                </div>
+
+            </Div>
+            <div class="dash-board">
+                <div class="achievements">
+                    <h2>Achievements</h2>
+                    <hr>
+                    <div class="ach-board">
+                        <p class="no"> no achievements
+                        </p>
+
+
+                    </div>
+                </div>
+                <div class="rank">
+                    <h2>Rank</h2>
+                    <hr>
+                    <div class="rank-board">no rank</div>
+                </div>
+                <div class="game-history">
+                    <table>
+                        <thead class="t-h">
+                            <tr>
+                                <th class="th-1">#</th>
+                                <th class="th-2">Game Status</th>
+                                <th class="th-3">Score</th>
+                                <th class="th-4">Time</th>
+                                <th class="th-5">Wrong Tries</th>
+                            </tr>
+                        </thead>
+                    </table>
+
+                    <h2>Game history</h2>
+                    <hr>
+                    <div class="gam-board">no game played</div>
+                </div>
+            </div>
+            <div class="starter-div"> <span class="game-starter">New game</span>
+            </div>
+        </div>
+        <div class="the-game">
+            <div class="game-info">
+                <h2 class="i-con-c">❌</h2>
+                <div class="game-name">Hangman</div>
+                <div class="category">
+                    Word From: <span></span>
+                </div>
+            </div>
+            <hr class="game-hr">
+            <div class="row">
+                <div class="hangman-draw">
+                    <div class="the-draw">
+                        <div class="the-stand"></div>
+                        <div class="the-hang"></div>
+                        <div class="the-rope"></div>
+                        <div class="the-man">
+                            <div class="head"></div>
+                            <div class="body"></div>
+                            <div class="hands"></div>
+                            <div class="legs"></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="letters"></div>
+            </div>
+            <hr class="game-hr">
+            <div class="letters-guess"></div>
+            <div class="time-tries">
+                <div class="tries">
+                    <p>Wrong Tries:</p>
+                    <span class="s-t">0</span>
+                </div>
+                <div class="time">
+                    <p>remaining time:</p>
+                    <span class="s-ti"></span>
+                </div>
+                <div class="container-2">
+                    <div class="alert-2 alert-error">
+                        <div class="alert-icon">
+                            <span class="material-symbols-outlined">
+                                <i class="i-w fa-solid fa-exclamation fa-beat-fade fa-xl" style="color: #ffffff;"></i>
+                            </span>
+                        </div>
+                        <div class="alert-text-2">
+                            Add Your Custom Message Here
+                        </div>
+                    </div>
+                </div>
+                <div class="time-f"></div>
+
+            </div>
+        </div>
+
+    </div>
+    <audio id="success" src="sound/success-1-6297.mp4" preload="auto"></audio>
+    <audio id="fail" src="sound/negative_beeps-6008.mp4" preload="auto"></audio>
+    <script src="js/m.js"></script>
+    <script src="js/all.min.js"></script>
+</body>
+
+</html>
