@@ -9,7 +9,7 @@ let wroteLetters = ["", "", "", "", ""];
 let currentGameScore;
 let points = 0;
 let gameNumber = 0;
- 
+
 if (localStorage.getItem("points")) {
     points = parseInt(localStorage.getItem("points"))
 }
