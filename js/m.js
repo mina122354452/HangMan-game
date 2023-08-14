@@ -1369,8 +1369,9 @@ fetch('https://mina122354452.github.io/HangMan-game/js.json')
                     // edit
                     startGame.onclick = function() {
                         // Set a query parameter to indicate the need to hide elements after reload
-                        window.location.href = window.location.href + "?hideElements=true";
-                        // Reload the page
+  const currentURL = new URL(window.location.href);
+                currentURL.searchParams.set('hideElements', 'true');
+                window.location.href = currentURL.toString();                        // Reload the page
                         // location.reload();
                     };
                     // let win = new History("win", currentGameScore, tokenSeconds, sWrong);
