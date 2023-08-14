@@ -9,7 +9,15 @@ let wroteLetters = ["", "", "", "", ""];
 let currentGameScore;
 let points = 0;
 let gameNumber = 0;
- if (points <= 0) {
+ 
+if (localStorage.getItem("points")) {
+    points = parseInt(localStorage.getItem("points"))
+}
+if (localStorage.getItem("gameNumber")) {
+    gameNumber = parseInt(localStorage.getItem("gameNumber"))
+}
+let rank = 'nope';
+if (points <= 0) {
         rank = "nope"
 
     } else if (points <= 20) {
@@ -25,13 +33,6 @@ let gameNumber = 0;
     } else if (points >= 101) {
         rank = "Legend"
     };
-if (localStorage.getItem("points")) {
-    points = parseInt(localStorage.getItem("points"))
-}
-if (localStorage.getItem("gameNumber")) {
-    gameNumber = parseInt(localStorage.getItem("gameNumber"))
-}
-let rank = 'nope';
 let br = document.createElement("br");
 let closeGame = document.querySelector(".i-con-c");
 let mainUrl = "https://mina122354452.github.io/HangMan-game/index.html";
