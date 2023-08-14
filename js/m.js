@@ -17,6 +17,22 @@ if (localStorage.getItem("gameNumber")) {
     gameNumber = parseInt(localStorage.getItem("gameNumber"))
 }
 let rank = 'nope';
+if (points <= 0) {
+        rank = "nope"
+
+    } else if (points <= 20) {
+        rank = "Amateur"
+    } else if (points <= 40) {
+        rank = "HotShot"
+    } else if (points <= 60) {
+        rank = "Expert"
+    } else if (points <= 80) {
+        rank = "Champ"
+    } else if (points <= 100) {
+        rank = "Superstar"
+    } else if (points >= 101) {
+        rank = "Legend"
+    };
 let br = document.createElement("br");
 let closeGame = document.querySelector(".i-con-c");
 let mainUrl = "https://mina122354452.github.io/HangMan-game/index.html";
@@ -1353,8 +1369,9 @@ fetch('https://mina122354452.github.io/HangMan-game/js.json')
                     // edit
                     startGame.onclick = function() {
                         // Set a query parameter to indicate the need to hide elements after reload
-                        window.location.href = window.location.href + "?hideElements=true";
-                        // Reload the page
+  const currentURL = new URL(window.location.href);
+                currentURL.searchParams.set('hideElements', 'true');
+                window.location.href = currentURL.toString();                        // Reload the page
                         // location.reload();
                     };
                     // let win = new History("win", currentGameScore, tokenSeconds, sWrong);
