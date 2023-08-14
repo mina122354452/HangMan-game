@@ -9,22 +9,7 @@ let wroteLetters = ["", "", "", "", ""];
 let currentGameScore;
 let points = 0;
 let gameNumber = 0;
- if (points <= 0) {
-        rank = "nope"
 
-    } else if (points <= 20) {
-        rank = "Amateur"
-    } else if (points <= 40) {
-        rank = "HotShot"
-    } else if (points <= 60) {
-        rank = "Expert"
-    } else if (points <= 80) {
-        rank = "Champ"
-    } else if (points <= 100) {
-        rank = "Superstar"
-    } else if (points >= 101) {
-        rank = "Legend"
-    };
 if (localStorage.getItem("points")) {
     points = parseInt(localStorage.getItem("points"))
 }
